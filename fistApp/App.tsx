@@ -5,8 +5,10 @@ import Person from './src/screen/Person';
 
 export default class App extends Component {
  
+  
 
   render() {
+
    
     const saludo:string="Hola mundo";
     const edad:number=10;
@@ -27,6 +29,7 @@ export default class App extends Component {
         
     }
 
+    const props={nombre:"Eirck",apellido:"Roberto",edad:3}
     return (
       <View>
         <Text>Variable tipo string {saludo} </Text>
@@ -51,6 +54,8 @@ export default class App extends Component {
       <Home></Home>
       <Person nombre='Erick' apellido='Rapalo'></Person>
       <Person {...{nombre:'Erick',apellido:'Rapalo'}}></Person>
+      <Person {...props}>Esto se llama propagacion</Person>
+
       </View>
     )
   }
