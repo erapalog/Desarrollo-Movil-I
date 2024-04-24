@@ -1,5 +1,7 @@
 import { Text, View } from 'react-native'
 import React, { Component } from 'react'
+import Home from './src/screen/Home';
+import Person from './src/screen/Person';
 
 export default class App extends Component {
  
@@ -44,7 +46,11 @@ export default class App extends Component {
         }
 
       <Text>Nombre de la persona {PersonaObjeto.nombre} </Text>
-      <Text>Edad de la persona {PersonaObjeto.edad} </Text>
+      <Text>Edad de la persona  {PersonaObjeto.edad} </Text>
+
+      <Home></Home>
+      <Person nombre='Erick' apellido='Rapalo'></Person>
+      <Person {...{nombre:'Erick',apellido:'Rapalo'}}></Person>
       </View>
     )
   }
