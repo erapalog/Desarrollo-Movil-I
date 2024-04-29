@@ -2,6 +2,7 @@ import { Text, View } from 'react-native'
 import React, { Component } from 'react'
 import Home from './src/screen/Home';
 import Person from './src/screen/Person';
+import Calculator from './src/screen/Calculator';
 
 export default class App extends Component {
  
@@ -30,6 +31,10 @@ export default class App extends Component {
     }
 
     const props={nombre:"Eirck",apellido:"Roberto",edad:3}
+
+    const operation={a:2,b:2, option:3}
+
+    
     return (
       <View>
         <Text>Variable tipo string {saludo} </Text>
@@ -55,6 +60,14 @@ export default class App extends Component {
       <Person nombre='Erick' apellido='Rapalo'></Person>
       <Person {...{nombre:'Erick',apellido:'Rapalo'}}></Person>
       <Person {...props}>Esto se llama propagacion</Person>
+
+      <Calculator a={3} b={5} option={1}></Calculator>
+      <Calculator a={3} b={5} option={2}></Calculator>
+      <Calculator a={3} b={5} option={3}></Calculator>
+      <Calculator a={3} b={5} option={4}></Calculator>
+
+
+      <Calculator {...operation}></Calculator>
 
       </View>
     )
