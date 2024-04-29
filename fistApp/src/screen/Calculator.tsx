@@ -14,7 +14,7 @@ function calcularOperaciones(props:OPerationProps) {
     
   let result:any;
 
-  switch (props.option) {
+  switch (props.option) {  
       case 1:
         result = props.a + props.b;
         break;
