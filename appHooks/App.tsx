@@ -1,16 +1,25 @@
 import { Text, View } from 'react-native'
 import React, { Component } from 'react'
-import FechasComponent from './src/screen/FechasComponent'
-import FormularioComponent from './src/screen/FormularioComponent'
+import HookUseStare from './src/screen/FechaComponent/HookUseStare'
+import FormUser from './src/screen/userEffect/FormUser/FormUser'
+import HookMemo from './src/screen/memo/HookMemo'
+import ProviderContextCount from './src/screen/Provider/ProviderContextCount'
+import ConsumerCounter from './src/screen/Consumer/ConsumerCounter'
 
 export default class App extends Component {
   render() {
     return (
       <View>
         <Text>App</Text>
+       {/* <HookUseStare></HookUseStare>
 
-        <FechasComponent></FechasComponent>
-        <FormularioComponent></FormularioComponent>
+        <FormUser></FormUser>
+
+        <HookMemo></HookMemo>*/}
+
+        <ProviderContextCount>
+          <ConsumerCounter></ConsumerCounter>
+        </ProviderContextCount>
       </View>
     )
   }
