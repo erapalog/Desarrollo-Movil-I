@@ -6,6 +6,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import Home from '../screen/Home';
 import Settings from '../screen/Settings';
 import { MaterialIcons } from '@expo/vector-icons';
+import Formulario from '../screen/Formulario';
 
 
 const tab =createBottomTabNavigator();
@@ -15,7 +16,7 @@ const Navigator = () => {
    
     <NavigationContainer>
         <tab.Navigator
-            initialRouteName='Home'
+            initialRouteName='Formulario'
         >
 
             <tab.Screen name='Home' component={Home} 
@@ -29,6 +30,8 @@ const Navigator = () => {
 
             ></tab.Screen>
             <tab.Screen name='Settings' component={Settings}></tab.Screen>
+
+            <tab.Screen name='Formulario' component={Formulario}></tab.Screen>
         </tab.Navigator>
     </NavigationContainer>
   )
