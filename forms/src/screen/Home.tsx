@@ -1,6 +1,7 @@
 import { View, Text, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native'
+import {Captura} from '../assets/Captura.png'
 
 export default function Home() {
   const navigator= useNavigation();
@@ -10,7 +11,7 @@ export default function Home() {
   }
 
   function irStackParametros() {
-    navigator.navigate("StackParameter", {nombre:"juan", apellido: 'perez'});
+    navigator.navigate("StackParameter", {nombre:"juan", apellido: 'perez', image:Captura});
   }
   return (
     <View>
